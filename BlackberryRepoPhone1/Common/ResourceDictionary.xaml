@@ -1,0 +1,22 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls">
+
+    <!-- 100 percent White-->
+   
+   <Color x:Key="PhoneBackgroundColor">#5d8aa8</Color>
+    <Color x:Key="PhoneForegroundColor">#FFFFFF</Color>
+    <Color x:Key="PhoneChromeColor">#5d8aa8</Color>
+    <SolidColorBrush x:Key="PhoneBackgroundBrush" Color="{StaticResource PhoneBackgroundColor}"/>
+    <SolidColorBrush x:Key="PhoneForegroundBrush" Color="{StaticResource PhoneForegroundColor}"/>
+    <SolidColorBrush x:Key="PhoneChromeBrush" Color="{StaticResource PhoneChromeColor}"></SolidColorBrush>
+    <Style TargetType="Grid" x:Key="ImageTest">
+        <Setter Property="Background">
+            <Setter.Value>
+                <ImageBrush ImageSource="program_tile_green.png"/>
+            </Setter.Value>
+        </Setter> 
+    </Style>
+
+</ResourceDictionary>

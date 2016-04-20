@@ -1,0 +1,69 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BlackberryRepo.Common"
+    xmlns:converters="using:BlackberryRepo.Converters">
+
+    <DataTemplate x:Key="TitleGroupedItemsTemplate">
+        <StackPanel Orientation="Vertical">
+            <TextBlock Style="{StaticResource TitleTextStyle}"
+            Text="{Binding name}" />
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="OT_Zoomed_Out_GridView">
+        <Grid Width="280" Height="200">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+               
+                <!--Main Title-->
+                <Grid  VerticalAlignment="Bottom" >
+                    <TextBlock Grid.Row="0"  FontSize="40" Text="{Binding Group.GroupName}"  />
+                </Grid>
+            </Grid>
+         
+        </Grid>
+    </DataTemplate>
+ 
+    
+    
+    <Style x:Key="CplusplusStyle" TargetType="GridViewItem">
+        <Setter Property="Background" Value="PowderBlue"/>
+    </Style>
+
+    <Style x:Key="CsharpStyle" TargetType="GridViewItem">
+        <Setter Property="Background" Value="PaleGoldenrod"/>
+    </Style>
+
+    <Style x:Key="CStyle" TargetType="GridViewItem">
+        <Setter Property="Background" Value="Yellow"/>
+    </Style>
+
+    <Style x:Key="JavaScriptStyle" TargetType="GridViewItem">
+        <Setter Property="Background" Value="Green"/>
+    </Style>
+
+    <Style x:Key="JavaStyle" TargetType="GridViewItem">
+        <Setter Property="Background" Value="BlueViolet"/>
+    </Style>
+    <Style x:Key="RubyStyle" TargetType="GridViewItem">
+        <Setter Property="Background" Value="Orchid"/>
+    </Style>
+    <Style x:Key="XSLTStyle" TargetType="GridViewItem">
+        <Setter Property="Background" Value="PaleTurquoise"/>
+    </Style>
+
+    <converters:ItemTypeContainerStyleSelector x:Key="ItemContainerStyleSelector" 
+                                               CplusplusStyle="{StaticResource CplusplusStyle}"
+                                               CsharpStyle="{StaticResource CsharpStyle}"
+                                               CStyle="{StaticResource CStyle}"
+                                               JavaScriptStyle="{StaticResource JavaScriptStyle}"
+                                               JavaStyle="{StaticResource JavaStyle}"
+                                               RubyStyle="{StaticResource RubyStyle}"
+                                                XSLTStyle="{StaticResource XSLTStyle}" />
+
+</ResourceDictionary>
